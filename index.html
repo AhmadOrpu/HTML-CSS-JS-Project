@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Ostad Module 5 Assignment(With Html-BootStrap-Js)</title>
+
+    <style>
+        .custom-card {
+          max-width: 18rem;
+        }
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Orpu's Dream</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " >Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav><br><br>
+
+      <!-- Banner Section -->
+  <section class="banner text-center">
+    <div class="container-fluid">
+      <h2>Welcome To Age Verification</h2>
+      <h5>Enter Your Age :</h5>
+      <input type="number" id="ageInput" class="form-control-lg"><br>
+      <button onclick="checkAge()" class="btn btn-primary mt-3 px-3">Check</button>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section id="cardsSection" class="mt-5">
+    <div class="container-fluid">
+    </div>
+  </section>
+
+  <div class="container-fluid mt-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <div class="col">
+        <div class="card custom-card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Orpu's Dream</h5>
+            <p class="card-text">Any fool can write code that a computer can understand. Good programmers write code that humans can understand. Aren't You Think so !</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card custom-card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Orpu's Dream</h5>
+            <p class="card-text">Everybody should learn to program a computer because it teaches you how to think.Aren't You Think so ! i will sacrifice my whole life for programming.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card custom-card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Orpu's Dream</h5>
+            <p class="card-text">Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card custom-card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Orpu's Dream</h5>
+            <p class="card-text">You might not think that programmers are artists, but programming is an extremely creative profession. It’s logic-based creativity. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2024 Orpu's Website. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function checkAge() {
+      const age = document.getElementById('ageInput').value;
+      const cardsSection = document.getElementById('cardsSection');
+      let message, cardColor;
+
+      if (age >= 18) {
+        message = "You are an adult";
+        cardColor = "success";
+      } else {
+        message = "You are a child";
+        cardColor = "danger";
+      }
+
+      const cardHTML = `
+        <div class="card text-white bg-${cardColor} mb-3">
+          <div class="card-body">
+            <h5 class="card-title">${message}</h5>
+          </div>
+        </div>
+      `;
+      cardsSection.innerHTML = cardHTML;
+    }
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   
+</body>
+</html>
